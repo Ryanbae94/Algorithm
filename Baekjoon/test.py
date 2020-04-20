@@ -1,14 +1,7 @@
-def self_number(i) :
-    for j in range(i) :
-        num = 0
-        origin = j
-        while j != 0 :            
-            num += j % 10
-            j //= 10
-        if origin + num == i :
-            return False
-            break
-    return True
+def gcd_r(a, b):
+    if b == 0 :
+        return a
+    else :
+        return gcd_r(b, a%b)
 
-print(self_number(42))
-
+print(gcd_r(10, 20))
